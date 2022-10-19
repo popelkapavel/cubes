@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cubes", "cubes.csproj", "{1CB9772C-1E06-493A-84B8-65830259405D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D426F474-1FE3-4D1C-9F52-F6A0FC2D946A} = {D426F474-1FE3-4D1C-9F52-F6A0FC2D946A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "opengl", "opengl.csproj", "{D426F474-1FE3-4D1C-9F52-F6A0FC2D946A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CB9772C-1E06-493A-84B8-65830259405D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CB9772C-1E06-493A-84B8-65830259405D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CB9772C-1E06-493A-84B8-65830259405D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CB9772C-1E06-493A-84B8-65830259405D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D426F474-1FE3-4D1C-9F52-F6A0FC2D946A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D426F474-1FE3-4D1C-9F52-F6A0FC2D946A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D426F474-1FE3-4D1C-9F52-F6A0FC2D946A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D426F474-1FE3-4D1C-9F52-F6A0FC2D946A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F2C05CA0-3203-458C-B1D0-9755B5D33221}
+	EndGlobalSection
+EndGlobal

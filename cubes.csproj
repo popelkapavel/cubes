@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1CB9772C-1E06-493A-84B8-65830259405D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cubes</RootNamespace>
+    <AssemblyName>cubes</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>cubes.ico</ApplicationIcon>
+    <NoWin32Manifest>true</NoWin32Manifest>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fFilterSum.cs">
+      <SubType>Form</SubType>
+    </None>
+    <None Include="fFilterSum.Designer.cs">
+      <DependentUpon>fFilterSum.cs</DependentUpon>
+    </None>
+    <Compile Include="fhelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fhelp.Designer.cs">
+      <DependentUpon>fhelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmain.Designer.cs">
+      <DependentUpon>fmain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBoard.Designer.cs">
+      <DependentUpon>fBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="function.cs" />
+    <Compile Include="main.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="fFilterSum.resx">
+      <DependentUpon>fFilterSum.cs</DependentUpon>
+    </None>
+    <EmbeddedResource Include="fhelp.resx">
+      <DependentUpon>fhelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmain.resx">
+      <DependentUpon>fmain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBoard.resx">
+      <DependentUpon>fBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cubes.ico" />
+    <None Include="img\line.png" />
+    <None Include="img\pen.png" />
+    <None Include="img\lathez.png" />
+    <None Include="img\lathey.png" />
+    <None Include="img\lathex.png" />
+    <None Include="img\suma.png" />
+    <None Include="img\reverse.png" />
+    <None Include="img\tall.png" />
+    <None Include="img\keg.png" />
+    <None Include="img\head.png" />
+    <None Include="img\record.png" />
+    <None Include="img\left2right.png" />
+    <None Include="img\twist.png" />
+    <None Include="img\sphere.png" />
+    <None Include="img\box.png" />
+    <None Include="img\cylinder.png" />
+    <None Include="img\camera.png" />
+    <None Include="img\extend.png" />
+    <None Include="img\aligny.png" />
+    <None Include="img\exit.png" />
+    <None Include="img\cuty.png" />
+    <None Include="img\cone.png" />
+    <Content Include="img\extrude.png" />
+    <Content Include="img\extrudec.png" />
+    <Content Include="img\extrudes.png" />
+    <None Include="img\x7.png" />
+    <None Include="img\x19.png" />
+    <None Include="img\x27.png" />
+    <None Include="img\crosseye.png" />
+    <None Include="img\redo.png" />
+    <None Include="img\undo.png" />
+    <None Include="img\light.png" />
+    <None Include="img\shadows.png" />
+    <None Include="img\precise.png" />
+    <None Include="img\triangulation.png" />
+    <None Include="img\impand.png" />
+    <None Include="img\expand.png" />
+    <None Include="img\boundary.png" />
+    <None Include="img\not.png" />
+    <None Include="img\anaglyph.png" />
+    <None Include="img\viewmesh.png" />
+    <None Include="img\open.png" />
+    <None Include="img\export.png" />
+    <None Include="img\exportbmp.png" />
+    <None Include="img\print.png" />
+    <None Include="img\save.png" />
+    <None Include="img\new.png" />
+    <None Include="img\mesh.png" />
+    <None Include="img\rotoid.png" />
+    <None Include="img\z_mirror.png" />
+    <None Include="img\y_mirror.png" />
+    <None Include="img\x_mirror.png" />
+    <None Include="img\z_remove.png" />
+    <None Include="img\y_remove.png" />
+    <None Include="img\x_remove.png" />
+    <None Include="img\z_insert.png" />
+    <None Include="img\y_insert.png" />
+    <None Include="img\x_insert.png" />
+    <None Include="img\y_rot_0.png" />
+    <None Include="img\y_rot_1.png" />
+    <None Include="img\x_rot_1.png" />
+    <None Include="img\x_rot_0.png" />
+    <None Include="img\z_rot_1.png" />
+    <None Include="img\z_rot_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="opengl.csproj">
+      <Project>{D426F474-1FE3-4D1C-9F52-F6A0FC2D946A}</Project>
+      <Name>opengl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cubes.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
