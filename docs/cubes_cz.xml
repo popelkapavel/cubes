@@ -13,7 +13,7 @@
     <State_Province />
     <Zip_Postal_Code />
     <Country />
-    <Company_WebSite_URL />
+    <Company_WebSite_URL>https://popelkapavel.github.io/cubes</Company_WebSite_URL>
     <Contact_Info>
       <Author_First_Name>Firstname</Author_First_Name>
       <Author_Last_Name>Lastname</Author_Last_Name>
