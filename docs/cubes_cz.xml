@@ -67,10 +67,10 @@
   </Program_Info>
   <Program_Descriptions>
     <English>
-      <Keywords>arcade,pacman </Keywords>
-      <Char_Desc_45>Seberte všechny tečky s minimem tahů</Char_Desc_45>
-      <Char_Desc_80>Seberte všechny tečky s minimem tahů jako Pac-Man. S pouze jedním předvídatelným nepřítelem.</Char_Desc_80>
-      <Char_Desc_250>Seberte všechny tečky s minimem tahů jako Pac-Man. S pouze jedním předvídatelným nepřítelem. Se 100 úrovněmi v upravitelném textovém souboru. Úroveň lze zrcadlit kolem osy x a y. Lze hrát pomocí klávesnice nebo myši.</Char_Desc_250>
+      <Keywords>arcade,pacman</Keywords>
+      <Char_Desc_45>Cubes je 3D bitmap editor (voxel editor)</Char_Desc_45>
+      <Char_Desc_80>Cubes je jednoduchý editor monochromatických 3D bitmap (voxel editor)</Char_Desc_80>
+      <Char_Desc_250>Cubes je jednoduchý editor monochromatických 3D bitmap (voxel editor) a jejich převod na síť polygonů.Síť lze poté vyhladit a zpřesnit.Bitmapu a vektor (EMF) pak můžete zkopírovat do schránky, exportovat nebo uložit.</Char_Desc_250>
       <Char_Desc_450 />
       <Char_Desc_2000 />
     </English>
