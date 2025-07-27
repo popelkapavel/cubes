@@ -709,7 +709,48 @@ namespace Math3d {
            for(x=0;x<dx;x++)
              set(x,y,z,f1d(f3d(rx[x],ry[y],rz)));
        }
-     } 
+     }
+     public void and(int z) {
+       if(z<0||z>=dz) return;
+       int x,j,h,xl=(dx+31)>>5,yl=xl*dy,s=z*yl,zl=yl*dz;
+       for(x=0;x<zl;) 
+       if(x!=s)       
+         for(j=0,h=s;j<yl;j++) bit[x++]&=bit[h++];
+       else x+=yl;
+       
+     }
+
+     public void cuts(int axis,bool[] dash,int offset) {
+       if(dash==null) dash=new bool[] {false,true};       
+       int x,y,z,i,dl=dash.Length,xl=(dx+31)>>5;
+       offset%=dl;
+       if(axis==1) {
+         for(z=x=0;z<dz;z++) {
+           for(y=0,i=offset;y<dy;y++,i++) {
+             if(i==dl) i=0;
+             if(!dash[i]) for(int j=0;j<xl;j++) bit[x++]=0;
+             else x+=xl;
+           }
+         }
+       } else if(axis==2) {
+         for(z=i=0;z<dz;z++) {
+           if(i==dl) i=0;
+           if(!dash[i++]) clear(false,0,0,z,dx,dy,1);
+         }
+       } else {
+         uint[] da=new uint[xl];
+         for(x=0,i=offset;x<dx;x++) {
+           if(i==dl) i=0;
+           if(dash[i++]) da[x>>5]|=(uint)(1<<(x&31));
+         }
+         dl=da.Length;
+         int zl=xl*dy*dz;
+         for(x=i=0;x<zl;i++) {
+           if(i==dl) i=0;
+           bit[x++]&=da[i];
+         }
+       }
+     }
      
      public void mirrorcopy(int axis,int pos) {
        mirrorcopy(axis,pos,0,0,0,dx-1,dy-1,dz-1);

@@ -319,7 +319,10 @@ namespace cubes {
       scy=pMain.VerticalScroll.Value;
     }
     void UpdateDZ() {
-      tZ.Maximum=b3d.dz-1;
+      int m=b3d.dz-1;
+      if(z>m) z=m;
+      if(tZ.Value>m) tZ.Value=m;
+      tZ.Maximum=m;
     }
     void ChangeCubeSize(int s) {
       if(s<1) s=1;else if(s>64) s=64;
@@ -997,6 +1000,17 @@ namespace cubes {
         break;
       }
     }
+    void Cuts(int axis) {
+      PushUndo();
+      b3d.cuts(axis,null,0);
+      Invalid();
+    }
+    void And() {
+      PushUndo();
+      b3d.and(z);
+      Invalid();
+    }
+
     void Lathe(bool shift) {
       if(SelectionEmpty()&&(mmy!=y||mmx!=x)) {
         Lathe1(x,y,mmx,mmy);
@@ -1509,6 +1523,7 @@ namespace cubes {
     private void mOpDoubleSize_Click(object sender,EventArgs e) {
       PushUndo();
       b3d.resize(2*b3d.dx,2*b3d.dy,2*b3d.dz);
+      UpdateDZ();
       Invalid();
     }
     void ClearUndo() {
@@ -2184,6 +2199,7 @@ namespace cubes {
       PushUndo();
       int nx=b3d.dx/2,ny=b3d.dy/2,nz=b3d.dz/2;
       b3d.resize(nx>0?nx:1,ny>0?ny:1,nz>0?nz:1);
+      UpdateDZ();
       Invalid();
     }
 
@@ -2491,6 +2507,8 @@ namespace cubes {
        case "lathex":Lathe3(false);break;
        case "lathey":Lathe3(true);break;
        case "lathez":Lathe1();break;
+       case "cuts":Cuts(CtrlDown?2:ShiftDown?1:0);break;
+       case "and":And();break;
       }
     }
 

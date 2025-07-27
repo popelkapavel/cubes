@@ -93,6 +93,16 @@ namespace cubes.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap and {
+            get {
+                object obj = ResourceManager.GetObject("and", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap boundary {
             get {
                 object obj = ResourceManager.GetObject("boundary", resourceCulture);
@@ -136,6 +146,16 @@ namespace cubes.Properties {
         internal static System.Drawing.Bitmap crosseye {
             get {
                 object obj = ResourceManager.GetObject("crosseye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cuts {
+            get {
+                object obj = ResourceManager.GetObject("cuts", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -160,6 +160,9 @@
       this.bAutoSize = new System.Windows.Forms.Button();
       this.timer = new System.Windows.Forms.Timer(this.components);
       this.pControl = new System.Windows.Forms.Panel();
+      this.bAnd = new System.Windows.Forms.Button();
+      this.bCuts = new System.Windows.Forms.Button();
+      this.chFillDown = new System.Windows.Forms.CheckBox();
       this.bCone = new System.Windows.Forms.Button();
       this.bLathez = new System.Windows.Forms.Button();
       this.bLathey = new System.Windows.Forms.Button();
@@ -205,7 +208,6 @@
       this.rbD1n = new System.Windows.Forms.RadioButton();
       this.pMain = new System.Windows.Forms.Panel();
       this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-      this.chFillDown = new System.Windows.Forms.CheckBox();
       this.menu.SuspendLayout();
       this.pControl.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.tZ)).BeginInit();
@@ -1367,6 +1369,8 @@
       // 
       // pControl
       // 
+      this.pControl.Controls.Add(this.bAnd);
+      this.pControl.Controls.Add(this.bCuts);
       this.pControl.Controls.Add(this.chFillDown);
       this.pControl.Controls.Add(this.bCone);
       this.pControl.Controls.Add(this.bLathez);
@@ -1420,6 +1424,42 @@
       this.pControl.Name = "pControl";
       this.pControl.Size = new System.Drawing.Size(81, 529);
       this.pControl.TabIndex = 19;
+      // 
+      // bAnd
+      // 
+      this.bAnd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+      this.bAnd.Image = global::cubes.Properties.Resources.and;
+      this.bAnd.Location = new System.Drawing.Point(53, 503);
+      this.bAnd.Name = "bAnd";
+      this.bAnd.Size = new System.Drawing.Size(24, 24);
+      this.bAnd.TabIndex = 54;
+      this.bAnd.Tag = "and";
+      this.toolTip.SetToolTip(this.bAnd, "3D \"and\" by current plane");
+      this.bAnd.UseVisualStyleBackColor = true;
+      this.bAnd.Click += new System.EventHandler(this.Button_Click);
+      // 
+      // bCuts
+      // 
+      this.bCuts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+      this.bCuts.Image = global::cubes.Properties.Resources.cuts;
+      this.bCuts.Location = new System.Drawing.Point(29, 503);
+      this.bCuts.Name = "bCuts";
+      this.bCuts.Size = new System.Drawing.Size(24, 24);
+      this.bCuts.TabIndex = 53;
+      this.bCuts.Tag = "cuts";
+      this.toolTip.SetToolTip(this.bCuts, "Cuts (Shift horizontal, Ctrl : Z axis)");
+      this.bCuts.UseVisualStyleBackColor = true;
+      this.bCuts.Click += new System.EventHandler(this.Button_Click);
+      // 
+      // chFillDown
+      // 
+      this.chFillDown.AutoSize = true;
+      this.chFillDown.Location = new System.Drawing.Point(62, 222);
+      this.chFillDown.Name = "chFillDown";
+      this.chFillDown.Size = new System.Drawing.Size(15, 14);
+      this.chFillDown.TabIndex = 52;
+      this.toolTip.SetToolTip(this.chFillDown, "Fill down");
+      this.chFillDown.UseVisualStyleBackColor = true;
       // 
       // bCone
       // 
@@ -1989,16 +2029,6 @@
       this.pMain.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pMain_MouseUp);
       this.pMain.Resize += new System.EventHandler(this.pMain_Resize);
       // 
-      // chFillDown
-      // 
-      this.chFillDown.AutoSize = true;
-      this.chFillDown.Location = new System.Drawing.Point(62, 222);
-      this.chFillDown.Name = "chFillDown";
-      this.chFillDown.Size = new System.Drawing.Size(15, 14);
-      this.chFillDown.TabIndex = 52;
-      this.toolTip.SetToolTip(this.chFillDown, "Fill down");
-      this.chFillDown.UseVisualStyleBackColor = true;
-      // 
       // fmain
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2206,6 +2236,8 @@
     private System.Windows.Forms.RadioButton rbD1n;
     private System.Windows.Forms.Button bCone;
     private System.Windows.Forms.CheckBox chFillDown;
+    private System.Windows.Forms.Button bCuts;
+    private System.Windows.Forms.Button bAnd;
   }
 }
 
